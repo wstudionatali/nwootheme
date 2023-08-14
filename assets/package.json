@@ -1,48 +1,57 @@
 {
-	"name": "advanced-woocommerce-theme",
-	"version": "1.0.0",
-	"description": "Advanced WooCommerce Theme packages",
-	"main": "main.js",
-	"scripts": {
-		"build": "cross-env NODE_ENV=production webpack --mode production --progress",
-		"dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
-		"clean": "rm -rf build/*"
-	},
-	"keywords": [
-		"woocommerce",
-		"wordpress",
-		"themes"
-	],
-	"author": "Imran Sayed",
-	"license": "GNU",
-	"private": true,
-	"devDependencies": {
-		"@babel/core": "^7.11.1",
-		"@babel/preset-env": "^7.11.0",
-		"@babel/preset-react": "^7.10.4",
-		"babel-loader": "^8.1.0",
-		"clean-webpack-plugin": "^3.0.0",
-		"cross-env": "^7.0.2",
-		"css-loader": "^4.2.1",
-		"cssnano": "^4.1.10",
-		"file-loader": "^6.0.0",
-		"mini-css-extract-plugin": "^0.9.0",
-		"node-sass": "^4.14.1",
-		"optimize-css-assets-webpack-plugin": "^5.0.3",
-		"postcss-loader": "^4.1.0",
-		"precss": "^4.0.0",
-		"sass-loader": "^9.0.3",
-		"sass-mq": "^5.0.1",
-		"style-loader": "^1.2.1",
-		"tailwindcss": "^2.0.2",
-		"uglifyjs-webpack-plugin": "^2.2.0",
-		"webpack": "^4.44.1",
-		"webpack-cli": "^3.3.12"
-	},
-	"browserslist": [
-		"defaults"
-	],
-	"dependencies": {
-		"lodash": "^4.17.20"
-	}
+  "name": "n-woo-theme",
+  "version": "1.0.0",
+  "description": "starter woocommerce theme",
+  "main": "main.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rd /q -r  build" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wstudionatali/nwootheme.git"
+  },
+  "keywords": [
+    "woprdpress",
+    "woocommerce",
+    "theme",
+    "starter"
+  ],
+  "author": "wstudionatali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wstudionatali/nwootheme/issues"
+  },
+  "homepage": "https://github.com/wstudionatali/nwootheme#readme",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "cssnano": "^6.0.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.1.1",
+    "sass-loader": "^13.3.2",
+    "sass-mq": "^6.0.0",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "postcss-import": "^15.1.0"
+  }
 }

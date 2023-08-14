@@ -4,10 +4,10 @@
  */
 const path                    = require('path')
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const cssnano                 = require('cssnano')
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin')
-const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin");
 
 // JS Directory path.
 const JS_DIR    = path.resolve(__dirname, 'src/js')
@@ -103,15 +103,8 @@ module.exports = (env, argv) => ({
 
   optimization: {
     minimizer: [
-      new OptimizeCssAssetsPlugin({
-        cssProcessor: cssnano
-      }),
-
-      new UglifyJsPlugin({
-        cache: false,
-        parallel: true,
-        sourceMap: false
-      })
+      new CssMinimizerPlugin(),
+      new TerserPlugin()
     ]
   },
 
