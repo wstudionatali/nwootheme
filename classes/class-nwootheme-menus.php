@@ -41,9 +41,9 @@ class n_woo_theme_Menus {
 		$locations = get_nav_menu_locations();
 
 		// Get object id by location.
-		$menu_id = $locations[$location];
+		if (key_exists($location, $locations)) $menu_id = $locations[$location]; else $menu_id ="";
 
-		return ! empty( $menu_id ) ? $menu_id : '';
+		return  $menu_id;
 
 	}
 

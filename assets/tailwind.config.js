@@ -15,7 +15,6 @@ module.exports = {
     "../**/**.php",
     "./src/js/**.js"
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       'sm': '640px',
@@ -46,6 +45,7 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+        '50%':'50%',
       },
       screens: {
         '3xl': '1600px',

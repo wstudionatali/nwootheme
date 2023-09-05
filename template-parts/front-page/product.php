@@ -28,7 +28,7 @@ if ( $is_product_in_stock ) {
 			<?php
 				if ( $is_product_on_sale ) {
 					?>
-					<span class="absolute top-0 right-0 px-3 py-1 text-white capitalize bg-black z-10 bg-opacity-80">
+					<span class="absolute top-2 left-2 px-3 py-1 text-white capitalize bg-black z-10 bg-opacity-80 bg-pink rounded-50%">
 						Sale
 					</span>
 					<?php

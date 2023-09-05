@@ -93,4 +93,10 @@ npm run clean
 **for Linux in package.json use**
      "scripts": {
           "clean": "rm -rf build/*"
-     },  
+     }, 
+#### If you use tailwind support for block editor you should follow one of the pieces of advice:
+##### 1. Safelist classes in your Tailwind configuration file (if you know in advance what the classes will be)
+##### 2. Use Twind’s shim module to translate Tailwind utility classes into CSS using JavaScript
+        <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+           or
+        import shim from 'https://cdn.skypack.dev/twind/shim';  /* put the line in linked script.js file */     

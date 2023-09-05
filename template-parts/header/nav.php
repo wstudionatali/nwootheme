@@ -5,9 +5,14 @@
  * @package nwootheme Theme
  */
 
-$menu_class     = new n_woo_theme_Menus();
-$header_menu_id = $menu_class->get_menu_id( 'nwt-header-menu' );
-$header_menus   = wp_get_nav_menu_items( $header_menu_id );
+    $menu_class     = new n_woo_theme_Menus();
+
+	$header_menu_id = $menu_class->get_menu_id( 'nwt-header-menu' );
+	if ($header_menu_id) {
+	  $header_menus   = wp_get_nav_menu_items( $header_menu_id );
+	} else {
+      $header_menus = array();
+	}
 
 ?>
 
